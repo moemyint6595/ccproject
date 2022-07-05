@@ -1,0 +1,82 @@
+@import './mixing';
+
+.back-wrapper {
+   @include close-btn;
+}
+.signup-container {
+
+     height: 800px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-sizing: border-box;
+     background-image: radial-gradient(rgb(88, 2, 2), black);
+     .black-box {
+         border-radius: 5px;
+
+        .title-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 5px;
+   
+            .logo{
+                height: 2.8rem;
+                width: auto
+                ;
+            }
+           p{
+               font-size: 1.2rem;
+               color : white;
+           }
+        }
+   
+        .signup-form-wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding-top: 5px;
+            padding-left: 18px;
+            padding-right: 18px;
+            padding-bottom: 18px;
+
+            .box{
+                background-color: white;
+                height: 50px;
+                width: 400px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                
+                .email-input {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+               .user-input {
+                padding-left: 5px;
+                padding-right: 5px;
+               }
+               .password-input {
+                padding-left: 5px;
+                padding-right: 5px;
+               }
+               .repassword-input {
+                padding-left: 5px;
+                padding-right: 5px;
+               }
+          }
+          .signup-btn {
+              background-color: red;
+              border-radius: 50px;
+              transition:  all 0.2s ease-in-out;
+
+              &:hover {
+                  background-color: rgb(65, 64, 64);
+                  transition: all 0.2s ease-in-out;
+              }
+          }
+        }
+     }
+}

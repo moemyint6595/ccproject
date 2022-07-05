@@ -1,0 +1,93 @@
+@import './mixing';
+@import './variables';
+
+.back-wrapper {
+ @include close-btn;
+}
+.purchase-container {
+    height: 800px;
+   background-image: radial-gradient(rgb(88, 2, 2),black);
+   width: 100%;
+   @include flex-center;
+
+   .swiper {
+    height: 600px;
+   width: 1000px;
+   //media
+
+    .swiper-wrapper {
+        max-width: 1000px;
+
+        .swiper-slide {
+           height: 600px;
+           width: 100%;
+        //    background-color: purple;
+           display: flex;
+           align-items: center;
+           justify-content: space-evenly;
+           gap: 2rem;
+ 
+           .swiper-item {
+               height: 400px;
+               width: 250px;
+               background-color: black;
+               color: white;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               flex-direction: column;
+               position: relative;
+               transform: skewX(-10deg);
+
+               .gf-photo{
+                   width: 100%;
+                   height: 100%;
+                  
+               }
+               .shop-btn {
+                   position: absolute;
+                   bottom: -15px;
+                   color: black;
+                   transform: skewX(-20deg);
+                
+                   &:hover {
+                       transition: 0.1s ease-in-out;
+                       background-color: rgb(163, 162, 162);
+                   }
+
+                   a {
+                       text-decoration: none;
+                       color: black;
+                       width: 100%;
+                       height: 100%;
+                   }
+               }
+               .col1{
+                background-color: yellow;
+              }
+              .col2{
+                  background-color: rgb(53, 53, 250);
+              }
+              .col3{
+                  background-color: rgb(255, 102, 0);
+              }
+           }
+        }
+    } 
+    .swiper-button-prev{
+       transform: scale(1.2);
+       width: 80px;
+       color: black;
+       transform: skewX(20deg);
+       background-color: $slide-btn-color;
+    }
+    .swiper-button-next{
+        transform: scale(1.2);
+        width: 80px;
+        transform: skewX(-20deg);
+        color: black;
+        background-color: $slide-btn-color;
+        
+    }
+ }
+}

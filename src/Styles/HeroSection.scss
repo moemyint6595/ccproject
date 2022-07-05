@@ -1,0 +1,103 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+// .herosection-div{
+//     position: relative;
+//     height: 800px;
+// }
+.hero-container {
+    background-color: $bg-dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    height: 800px;
+    
+
+    .hero-bg {
+        position: absolute;
+        top : 0;
+        left :0;
+        right :0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .hero-bg-video {
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            background: #232a34;
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+        }
+    }
+    .hero-content-container {
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        max-width: 1200px;
+        padding: 8px 24px;
+        .hero-h1{
+            color: #fff;
+            text-align: center;
+            font-size: 48px;
+            font-family: 'Koulen', cursive;
+            span {
+                background-color: $primary;
+                border-radius: 5px;
+                color: black;
+                font-family: 'Macondo', cursive;
+                padding: 2px;
+                
+            }
+            @media  screen and (max-width: 992px) {
+                font-size: 40px;
+            }
+            @media  screen and (max-width: 576px) {
+                font-size: 30px;
+            }
+        }
+        .hero-paragrap {
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            max-width: 600px;
+            margin-top: 24px;
+
+            @media  screen and (max-width: 992px) {
+                font-size: 24px;
+            }
+            @media  screen and (max-width: 576px) {
+                font-size: 18px;
+            }
+        }
+        .hero-getstart-wrapper{
+            margin-top: 24px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .hero-btn{
+                background-color: $primary;
+                font-size: 18px;
+                transition: all 0.2s ease-in-out;
+                border-radius: 50px;
+                color: black;
+                transition: all 0.15s ease-in-out;
+
+                &:hover {
+                    background-color: rgb(255, 255, 255);
+                    transition: all 0.15s ease-in-out;
+                }
+            }
+        }
+        .btn-link {
+            text-decoration: none;
+        }
+    }
+}

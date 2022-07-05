@@ -1,0 +1,194 @@
+@import './variables';
+
+.footer-container {
+    height: 400px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    @media screen and (max-width : 768px) {
+        height: 500px;
+    }
+    // @media screen and (max-width : 576px) {
+    //     height: 500px;
+    // }
+    
+    .footer-wrapper {
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr  ;
+        grid-gap: 20px;
+        div {
+            height: 160px;
+            width: 180px;
+            background-color: rgb(0, 0, 0);
+        }
+        @media screen and (max-width : 768px) {
+            grid-template-columns: 1fr 1fr ;
+        }
+        @media screen and (max-width : 576px) {
+            grid-template-columns: 1fr 1fr ;
+        }
+    }
+    .footer-content-wrapper{
+        color: rgb(255, 255, 255);
+        text-align: center;
+        max-width: 180px;
+        
+        h2{
+            margin-bottom: 12px;
+        }
+        
+        ul{
+            li{
+                list-style: none;
+                margin-bottom: 5px;
+                transition: all 0.2s ease-in-out;
+
+            }
+            a{
+                list-style: none;
+                margin-bottom: 5px;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+                display: block;
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    transition: all 0.2s ease-in-out;
+                    color: $primary;
+                }
+                    
+
+            }
+        }
+    }
+    .footer-sm-wrapper{
+        color: rgb(255, 255, 255);
+        text-align: center;
+        max-width: 180px;
+        
+        h2{
+            margin-bottom: 12px;
+        }
+        
+        .social-wrapper{
+            .social-link{
+                list-style: none;
+                margin-bottom: 5px;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                gap: 5px;
+                cursor: pointer;
+                text-decoration: none;
+                color: white;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    transition: all 0.2s ease-in-out;
+                    color: $primary;
+                }
+            }
+        }
+    }
+    .footer-copyright {
+        height: 50px;
+        background-color: white;
+        width: 100%;
+        position: relative;
+        top:95px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
+        .span {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .footer-last-span {
+            background-color: rgb(255, 255, 255);
+            color: white;
+        }
+    }
+    .footer-subscribed {
+        position: relative;
+        top : 25px;
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            height: 50px;
+             width:100%;
+          .footer-mail-box{
+
+            background-color: white;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+           .footer-email {
+            border-radius: 10px;
+            width: 400px;
+
+            @media screen and (max-width: 768px) {
+                width: 280px;
+                height: 40px;
+            }
+
+            @media screen and (max-width: 576px) {
+                width: 190px;
+                height: 40px;
+            }
+
+        }
+          }
+        .footer-sub-btn {
+            background-color: $primary;
+            border-radius: 10px;
+            height: 2.6rem;
+            color: black;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                transition: all 0.2s ease-in-out;
+                background-color: rgb(90, 90, 90) ; 
+            }
+
+            @media screen and (max-width: 576px) {
+                height: 37px;
+                width: 95px;
+            }
+        }
+      
+    }
+}
+.youtube {
+    color: #c4302b;
+    cursor: pointer;
+}
+.twitter {
+ color: #00acee;
+ cursor: pointer;
+}
+.instra {
+   color: #F77737;
+   cursor: pointer;
+}
+.reddit {
+color: #FF5700	;
+cursor: pointer;
+}
+.cclogo {
+    height : 2.4rem;
+    width: auto;
+    &:hover {
+        transform: scale(1);
+        transition: all 0.2s ease-in-out;
+    }
+}
