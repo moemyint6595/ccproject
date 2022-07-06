@@ -1,8 +1,5 @@
 
-# CHANGE CHANGE CHANGE CHANGE
-
-# TEST TEST TEST TEST TEST 
-
+# FINAL RESOLVED 
 
 # Getting Started with Create React App
 
